@@ -1,5 +1,12 @@
-require 'sinatra'
+require 'sinatra/base'
 
-get '/hi' do
-  "Hello World!"
+module WatchBug
+  class API < Sinatra::Base
+    get '/hi' do
+      puts 'CALLED'
+      "Hello World!"
+    end
+  end
 end
+
+run WatchBug::API
