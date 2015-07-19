@@ -9,7 +9,8 @@ gem 'spring', :group => :development
 gem 'rspec-rails', :group => :development
 
 
-gem 'sqlite3'
+gem 'sqlite3', :group => :development
+gem 'pg'
 
 
 
