@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150719141247) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "geolocations", force: :cascade do |t|
     t.string   "watchbug_id"
     t.string   "lat"
