@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: db/watchbug-prod
+  url: <%= ENV['DATABASE_URL'] %>
