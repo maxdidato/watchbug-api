@@ -12,8 +12,7 @@ gem 'rspec-rails', :group => :development
 
 gem 'sqlite3', :group => :development
 gem 'pg'
-gem 'thin', :group => :production
-
+gem 'thin'
 
 
 # To use ActiveModel has_secure_password
