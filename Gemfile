@@ -12,6 +12,7 @@ gem 'rspec-rails', :group => :development
 
 gem 'sqlite3', :group => :development
 gem 'pg'
+gem 'unicorn', :group => :production
 
 
 
