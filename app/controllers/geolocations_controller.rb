@@ -4,7 +4,7 @@ class GeolocationsController < ApplicationController
   end
 
   def show
-    @geolocation = Geolocation.find_by(watchbug_id:params[:id])
+    @geolocation = Geolocation.where(watchbug_id:params[:id]).last
     render json: @geolocation
   end
 end
