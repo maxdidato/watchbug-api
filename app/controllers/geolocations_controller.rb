@@ -1,6 +1,7 @@
 class GeolocationsController < ApplicationController
   def create
-    Geolocation.create!(watchbug_id:params[:id],lat:params[:lat],long:params[:long],alt: params[:alt])
+    location = Geolocation.find_or_create_by!(watchbug_id:params[:id])
+    location.update!(lat:params[:lat],long:params[:long],battery:params[:bat])
   end
 
   def show
