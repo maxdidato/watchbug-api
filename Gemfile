@@ -3,16 +3,20 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'rails', '4.2.2'
-
 gem 'rails-api'
-
-gem 'spring', :group => :development
-gem 'rspec-rails', :group => :development
-
-
-gem 'sqlite3', :group => :development
 gem 'pg'
 gem 'puma'
+
+group :development,:test do
+  gem 'spring'
+  gem 'rspec-rails'
+  gem 'sqlite3'
+  gem 'rack-test'
+  gem 'database_cleaner'
+  gem 'httparty'
+  gem 'cucumber-rails'
+end
+
 
 
 # To use ActiveModel has_secure_password
