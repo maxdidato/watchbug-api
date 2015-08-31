@@ -7,14 +7,16 @@ gem 'rails-api'
 gem 'pg'
 gem 'puma'
 
+group :test do
+  gem 'cucumber-rails', require:false
+  gem 'rack-test'
+  gem 'rspec-rails'
+end
 group :development,:test do
   gem 'spring'
-  gem 'rspec-rails'
   gem 'sqlite3'
-  gem 'rack-test'
   gem 'database_cleaner'
   gem 'httparty'
-  gem 'cucumber-rails'
 end
 
 
