@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
-
+#ruby-gemset=watchbug_api
 ruby '2.2.2'
 
 gem 'rails', '4.2.2'
 gem 'rails-api'
 gem 'pg'
 gem 'puma'
+gem 'faraday'
 
 group :test do
   gem 'cucumber-rails', require:false
@@ -17,6 +18,7 @@ group :development,:test do
   gem 'sqlite3'
   gem 'database_cleaner'
   gem 'httparty'
+  gem 'webmock'
 end
 
 

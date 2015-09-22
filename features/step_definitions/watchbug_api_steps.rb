@@ -2,7 +2,7 @@ When(/^(GET|POST) '(.*)'$/) do |method,url|
  send(method.downcase,url)
 end
 
-Then(/^a (\d+) should be received$/) do |arg|
+Then(/^a (\d+) is received$/) do |arg|
 expect(last_response.status).to eq(arg.to_i)
 end
 
@@ -14,4 +14,8 @@ Then(/^the following JSON body should be received$/) do |json|
 end
 def with_no_date_fields hash
   hash.select{|key,_| !key.to_s.match(/_at/)}
+end
+
+Then(/^Watchbug Web should receive a POST call '(.*)' with params$/) do|url,params|
+  stub_request(:post,Rails.configuration.watchbug_web+url).with(body:eval(params))
 end

@@ -2,7 +2,7 @@ Feature: Store and serve devices geolocation
 
   Scenario: Upload a geolocation
     When POST 'geolocations/221?lat=10&long=20&bat=40'
-    Then a 201 should be received
+    Then a 201 is received
 
   Scenario: Retrieve a geolocation
     Given POST 'geolocations/221?lat=10&long=20&bat=40'

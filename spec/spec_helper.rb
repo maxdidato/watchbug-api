@@ -100,3 +100,5 @@ RSpec.configure do |config|
     end
   end
 end
+require 'webmock/rspec'
+
